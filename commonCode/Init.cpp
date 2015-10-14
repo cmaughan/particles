@@ -43,8 +43,8 @@ void APIENTRY DebugFunc(GLenum source, GLenum type, GLuint id, GLenum severity, 
 		case GL_DEBUG_SEVERITY_LOW_ARB: typeSeverity = "Low"; break;
 	}
 
-	LOG("%s from %s,\t%s priority\nMessage: %s\n",
-		errorType.c_str(), srcName.c_str(), typeSeverity.c_str(), message);
+	/*LOG("%s from %s,\t%s priority\nMessage: %s\n",
+		errorType.c_str(), srcName.c_str(), typeSeverity.c_str(), message);*/
 }
 
 namespace utils
@@ -74,8 +74,8 @@ namespace utils
 
         if (ogl_ext_ARB_debug_output)
 	    {
-    		glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS_ARB);
-	    	glDebugMessageCallbackARB((GLDEBUGPROCARB)DebugFunc, nullptr);
+    		//glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS_ARB);
+	    	//glDebugMessageCallbackARB((GLDEBUGPROCARB)DebugFunc, nullptr);
             LOG("Debug Message Callback turned on!");
         }
         else

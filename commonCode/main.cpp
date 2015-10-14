@@ -91,7 +91,7 @@ int main(int argc, char **argv)
 	//
 	// 'init' OpenGL: GLEW... and print some basic info
 	//
-	if (utils::initGL(true) == false) 
+	if (utils::initGL(false) == false) 
 		return 1;
 	
 #ifdef _EX_USE_ANTTWEAKBAR
