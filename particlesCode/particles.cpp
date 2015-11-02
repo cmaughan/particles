@@ -94,6 +94,7 @@ namespace particles
 	void ParticleEmitter::emit(double dt, ParticleData *p)
 	{
 		const size_t maxNewParticles = static_cast<size_t>(dt*m_emitRate);
+        maxNewParticles = std::min(maxNewParticles, 1);
 		const size_t startId = p->m_countAlive;
 		const size_t endId = std::min(startId + maxNewParticles, p->m_count-1);
 
